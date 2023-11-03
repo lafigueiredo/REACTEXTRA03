@@ -1,0 +1,281 @@
+
+npm create vite@latest
+cria o nome da pasta
+escolhe React
+escolhe Javascript
+cd nome da pasta
+code .
+npm install
+npm run dev
+npm install react-router-dom styled-components axios json-server
+
+https://meyerweb.com/eric/tools/css/reset/
+https://fonts.google.com/specimen/Press+Start+2P?preview.text=lEONAROD%20&query=PRESS+START
+
+
+https://www.invertexto.com/homestyle
+https://www.invertexto.com/sobrestyle
+https://www.invertexto.com/cursosstyle
+https://www.invertexto.com/skillsstyle
+https://www.invertexto.com/projetosstyle
+https://www.invertexto.com/contatostyle
+https://www.invertexto.com/menustyle
+
+app.jsx
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { GlobalStyle } from "./GlobalStyle";
+import { Home } from "./pages/Home";
+import { Sobre } from "./pages/Sobre";
+import { Cursos } from "./pages/Cursos";
+import { Skills } from "./pages/Skills";
+import { Projetos } from "./pages/Projetos";
+import { Contato } from "./pages/Contato";
+import { Page404 } from "./pages/Page404";
+
+function App() {
+  return (
+    <>
+    <GlobalStyle/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="sobre" element={<Sobre/>}/>
+        <Route path="cursos" element={<Cursos/>}/>
+        <Route path="skills" element={<Skills/>}/>
+        <Route path="projetos" element={<Projetos/>}/>
+        <Route path="contato" element={<Contato/>}/>
+        <Route path="*" element={<Page404/>}/>
+      </Routes>
+    </BrowserRouter>
+    </>
+  )
+}
+
+export default App
+
+
+
+
+
+{
+  "home": {
+    "nome": "Abelardo Júnior",
+    "profissao": "Desenvolvedor Front-End"
+  },
+  "sobre": {
+    "titulo": "Sobre",
+    "imagem": "https://i.imgur.com/6rDZ9x2.png",
+    "texto": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse atque distinctio inventore laudantium possimus nulla autem eius deserunt vel, eos, iure optio ex. Ipsum similique eligendi commodi corporis odio laborum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse atque distinctio inventore laudantium possimus nulla autem eius deserunt vel, eos, iure optio ex. Ipsum similique eligendi commodi corporis odio laborum.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse atque distinctio inventore laudantium possimus nulla autem eius deserunt vel, eos, iure optio ex. Ipsum similique eligendi commodi corporis odio laborum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse atque distinctio inventore laudantium possimus nulla autem eius deserunt vel, eos, iure optio ex. Ipsum similique eligendi commodi corporis odio laborum."
+  },
+  "cursos": {
+    "titulo": "Cursos",
+    "lista": [
+      {
+        "instituicao": "Infinity School",
+        "nome_curso": "Programação Fullstack",
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.",
+        "duracao": "14 meses"
+      },
+      {
+        "instituicao": "Infinity School",
+        "nome_curso": "Data Science",
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.",
+        "duracao": "10 meses"
+      },
+      {
+        "instituicao": "Curso 2",
+        "nome_curso": "Programação 2",
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.",
+        "duracao": "16 meses"
+      },
+      {
+        "instituicao": "Curso 3",
+        "nome_curso": "Programação 4",
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.",
+        "duracao": "17 meses"
+      },
+      {
+        "instituicao": "Curso 4",
+        "nome_curso": "Programação 4",
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.",
+        "duracao": "18 meses"
+      },
+      {
+        "instituicao": "Curso 5",
+        "nome_curso": "Programação 5",
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis cumque fugiat obcaecati, aut molestiae nihil magni, cupiditate corrupti neque laboriosam reprehenderit officiis voluptates hic fugit veniam nesciunt, amet iste.",
+        "duracao": "20 meses"
+      }
+    ]
+  },
+  "skills": {
+    "titulo": "Minhas Habilidades",
+    "linguagens_programacao": [
+      "https://i.imgur.com/b6VbTdA.png",
+      "https://i.imgur.com/aYoq0Ra.png",
+      "https://i.imgur.com/5HVsNAa.png",
+      "https://i.imgur.com/ZnKtU7F.png",
+      "https://i.imgur.com/7OFYUY0.png",
+      "https://i.imgur.com/rSq2Ddv.png",
+      "https://i.imgur.com/ZOHnnbp.png",
+      "https://i.imgur.com/KV8k0WS.png"
+    ]
+  },
+  "projetos": {
+    "titulo": "Projetos",
+    "lista": [
+      {
+        "nome_projeto": "Rick and Morty API",
+        "imagem_projeto": "https://i.imgur.com/fiy1yAV.png"
+      },
+      {
+        "nome_projeto": "Rick and Morty API",
+        "imagem_projeto": "https://i.imgur.com/fiy1yAV.png"
+      },
+      {
+        "nome_projeto": "Rick and Morty API",
+        "imagem_projeto": "https://i.imgur.com/fiy1yAV.png"
+      },
+      {
+        "nome_projeto": "Rick and Morty API",
+        "imagem_projeto": "https://i.imgur.com/fiy1yAV.png"
+      }
+    ]
+  }
+}
+
+
+INDEX
+
+export const Cursos = () =>{
+    return(
+        <>
+            <h1>Cursos</h1>
+        </>
+    )
+}
+
+
+APP.JPX
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { GlobalStyle } from "./GlobalStyle"
+import { Home } from "./Pages/Home"
+import { Contato } from "./Pages/Contato"
+import { Cursos } from "./Pages/Cursos"
+import { Skills } from "./Pages/Skills"
+import { Sobre } from "./Pages/Sobre"
+import { Page404 } from "./Pages/Page404"
+import { Projetos } from "./Pages/Projetos"
+import { Menu } from "./Components/Menu"
+
+1
+
+function App() {
+
+  return (
+    <>
+    <GlobalStyle/>
+      <BrowserRouter>
+      <Menu/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="contato" element={<Contato/>}/>
+          <Route path="cursos" element={<Cursos/>}/>
+          <Route path="projetos" element={<Projetos/>}/>
+          <Route path="skills" element={<Skills/>}/>
+          <Route path="sobre" element={<Sobre/>}/>
+          <Route path="*" element={<Page404/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+
+export default App
+
+GLOBALSTYLE.JSX
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+    html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+`
+
+MAIN.JSX
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+
+
+COMPONENTS
+
+import { Link } from "react-router-dom"
+
+export const Menu = () =>{
+    return(
+        <nav>
+            <ul>
+                <li>    <Link to={"/"}>Home</Link>              </li>
+                <li>    <Link to={"/sobre"}>Sobre</Link>        </li>
+                <li>    <Link to={"/curso"}>Cusos</Link>        </li>
+                <li>    <Link to={"/skills"}>Skills</Link>      </li>
+                <li>    <Link to={"/projetos"}>Projetos</Link>  </li>
+                <li>    <Link to={"/contato"}>Contato</Link>    </li>
+            </ul>
+        </nav>
+    )
+}
+
+
+
